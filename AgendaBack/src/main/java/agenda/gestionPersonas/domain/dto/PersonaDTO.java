@@ -1,18 +1,16 @@
-package agenda.gestionPersonas.domain;
+package agenda.gestionPersonas.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Document
-public class PersonaVO {
+public class PersonaDTO {
 
     @Id
     private Integer ID;
