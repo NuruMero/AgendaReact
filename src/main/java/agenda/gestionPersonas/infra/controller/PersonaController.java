@@ -18,7 +18,7 @@ public class PersonaController implements PersonaAPI {
     }
 
     @Override
-    public ResponseEntity<?> getOneById(Integer id) {
+    public ResponseEntity<?> getOneById(String id) {
         return personaService.getOneById(id);
     }
 
@@ -28,12 +28,12 @@ public class PersonaController implements PersonaAPI {
     }
 
     @Override
-    public ResponseEntity<?> editOne(PersonaCreator editData, Integer id) {
+    public ResponseEntity<?> editOne(PersonaCreator editData, String id) {
         return personaService.editOne(editData, id);
     }
 
     @Override
-    public ResponseEntity<?> deleteOne(Integer id) {
+    public ResponseEntity<?> deleteOne(String id) {
         return personaService.deleteOne(id);
     }
 }

@@ -5,20 +5,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 public class PersonaCreator {
 
-    private Integer ID;
+    private String ID;
 
     //Datos personales
     private String nombre;
     private String apellido;
-    private LocalDate fnacimiento;
 
     //Datos localizacion
     private Integer codpostal;

@@ -14,7 +14,7 @@ public interface PersonaAPI {
     public ResponseEntity<?> findAll();
 
     @GetMapping(EndpointUrls.requiresID)
-    public ResponseEntity<?> getOneById(@PathVariable Integer id);
+    public ResponseEntity<?> getOneById(@PathVariable String id);
 
     //POST HTTP requests
     @PostMapping
@@ -22,9 +22,9 @@ public interface PersonaAPI {
 
     //PUT HTTP requests
     @PutMapping(EndpointUrls.requiresID)
-    public ResponseEntity<?> editOne(@RequestBody PersonaCreator editData, @PathVariable Integer id);
+    public ResponseEntity<?> editOne(@RequestBody PersonaCreator editData, @PathVariable String id);
 
     //DELETE HTTP requests
     @DeleteMapping(EndpointUrls.requiresID)
-    public ResponseEntity<?> deleteOne(@PathVariable Integer id);
+    public ResponseEntity<?> deleteOne(@PathVariable String id);
 }
