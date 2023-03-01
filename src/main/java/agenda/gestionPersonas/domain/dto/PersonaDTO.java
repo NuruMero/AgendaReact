@@ -5,20 +5,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
-import java.time.LocalDate;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class PersonaDTO {
 
     @Id
-    private Integer ID;
+    private String ID;
 
     //Datos personales
     private String nombre;
     private String apellido;
-    private LocalDate fnacimiento;
 
     //Datos localizacion
     private Integer codpostal;

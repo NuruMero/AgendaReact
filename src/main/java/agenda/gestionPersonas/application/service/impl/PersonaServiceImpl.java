@@ -36,7 +36,7 @@ public class PersonaServiceImpl implements PersonaService {
     }
 
     @Override
-    public ResponseEntity<?> getOneById(Integer ID) {
+    public ResponseEntity<?> getOneById(String ID) {
         PersonaVO persona = personaRepo.findById(ID).orElse(null);
         if (persona == null) {
             return ResponseEntity.notFound().build();
@@ -53,7 +53,7 @@ public class PersonaServiceImpl implements PersonaService {
     }
 
     @Override
-    public ResponseEntity<?> editOne(PersonaCreator creator, Integer ID) {
+    public ResponseEntity<?> editOne(PersonaCreator creator, String ID) {
         return personaRepo.findById(ID).map(persona -> {
             persona = personaConverter.fromCreatorToVO(creator);
             persona.setID(ID);
@@ -62,7 +62,7 @@ public class PersonaServiceImpl implements PersonaService {
     }
 
     @Override
-    public ResponseEntity<?> deleteOne(Integer ID) {
+    public ResponseEntity<?> deleteOne(String ID) {
         personaRepo.deleteById(ID);
         return ResponseEntity.noContent().build();
     }

@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -15,12 +13,11 @@ import java.time.LocalDate;
 public class PersonaVO {
 
     @Id
-    private Integer ID;
+    private String ID;
 
     //Datos personales
     private String nombre;
     private String apellido;
-    private LocalDate fnacimiento;
 
     //Datos localizacion
     private Integer codpostal;

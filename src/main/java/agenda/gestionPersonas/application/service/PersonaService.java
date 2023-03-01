@@ -7,11 +7,11 @@ public interface PersonaService {
 
     public ResponseEntity<?> findAll();
 
-    public ResponseEntity<?> getOneById(Integer ID);
+    public ResponseEntity<?> getOneById(String ID);
 
     public ResponseEntity<?> newOne(PersonaCreator creator);
 
-    public ResponseEntity<?> editOne(PersonaCreator creator, Integer ID);
+    public ResponseEntity<?> editOne(PersonaCreator creator, String ID);
 
-    public ResponseEntity<?> deleteOne(Integer ID);
+    public ResponseEntity<?> deleteOne(String ID);
 }
